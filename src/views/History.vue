@@ -1,7 +1,7 @@
 <template>
 	<div id="his">
 		<div class="score" v-for="(score, index) in sort_score" :key="index">
-			<div>
+			<div class="text">
 				<h2><b>NAME :</b> {{ score[1] }}</h2>
 				<h3><b>SCORE:</b> {{ score[0] }}</h3>
 				<h4><b>PLAY AS :</b> {{ score[2] }}</h4>
@@ -41,10 +41,12 @@ export default class History extends Vue {
 	flex-direction: row;
 	flex-wrap: wrap;
 }
+.text {
+	word-wrap: break-word;
+}
 .score {
 	margin: 2em;
 	border: 1px #000 solid;
-	max-width: 28vw;
 }
 .game {
 	margin: 1em;
